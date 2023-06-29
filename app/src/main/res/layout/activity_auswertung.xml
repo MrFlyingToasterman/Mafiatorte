@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/Resultat"
-        android:layout_width="296dp"
-        android:layout_height="202dp"
+        android:layout_width="297dp"
+        android:layout_height="369dp"
         android:layout_marginTop="56dp"
         android:text="Das Angebot Nummer X zum Preis von 3€ / cm² ist das Beste!"
         android:textAlignment="center"
@@ -36,10 +36,11 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="92dp"
         android:onClick="restart"
         android:text="Erneut Berechnen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Resultat" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
