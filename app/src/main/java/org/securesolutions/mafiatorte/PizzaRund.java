@@ -55,8 +55,12 @@ public class PizzaRund extends AppCompatActivity {
                 PreisBox.setError("Dieses Feld ist erforderlich!");
             }
             // Prüfe ob Durchmesser mindestens 1 und Preis mindestens 10 Cent
-            if (Durchmesser <= 1 || Preis < 0.1) {
+            if (Durchmesser <= 1 || Preis < 1) {
+                // Zeige Fehler an
                 toastThis("Fehler: Falsche Werte!\nBitte Eingaben überprüfen!");
+                // Variabeln leeren
+                Durchmesser = 0;
+                Preis = 0;
             } else {
                 // Berechne Flächeninhalt in cm²
                 double radius = Durchmesser / 2;
@@ -73,6 +77,9 @@ public class PizzaRund extends AppCompatActivity {
                 // Leere Eingabeboxen
                 DuchmesserBox.setText("");
                 PreisBox.setText("");
+                // Leere Variabeln
+                Durchmesser = 0;
+                Preis = 0;
                 // Ausgabe via Toast mit detailierten Konditionen
                 toastThis("Angebot Nummer " + (AItterator + 1) + " beträgt " + ppcm + "€ pro cm²");
                 // Zähle Angebot
